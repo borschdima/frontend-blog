@@ -1,0 +1,27 @@
+.appLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  line-height: 1.2;
+}
+
+.primary {
+  color: var(--inverted-primary-color);
+
+  @media (hover: hover) {
+    &:hover {
+      border-bottom: 1px solid var(--inverted-primary-color);
+    }
+  }
+}
+
+.secondary {
+  color: var(--primary-color);
+
+  @media (hover: hover) {
+    &:hover {
+      border-bottom: 1px solid var(--primary-color);
+    }
+  }
+}
