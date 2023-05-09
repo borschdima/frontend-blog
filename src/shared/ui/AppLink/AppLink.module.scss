@@ -12,6 +12,7 @@
   @media (hover: hover) {
     &:hover {
       border-bottom: 1px solid var(--inverted-primary-color);
+      color: var(--inverted-primary-color-hover)
     }
   }
 }
@@ -22,6 +23,7 @@
   @media (hover: hover) {
     &:hover {
       border-bottom: 1px solid var(--primary-color);
+      color: var(--primary-color-hover)
     }
   }
 }

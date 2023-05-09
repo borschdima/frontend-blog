@@ -1,0 +1,12 @@
+.themeSwitcherIcon {
+  path {
+    fill: var(--bg-color);
+
+    @media (hover: hover) {
+      &:hover{
+        fill: var(--inverted-primary-color-hover);
+        transition: all 0.1s linear;
+      }
+    }
+  }
+}
