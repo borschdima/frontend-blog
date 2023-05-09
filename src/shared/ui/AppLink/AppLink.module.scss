@@ -7,12 +7,12 @@
 }
 
 .primary {
-  color: var(--inverted-primary-color);
+  color: var(--primary-color);
 
   @media (hover: hover) {
     &:hover {
-      border-bottom: 1px solid var(--inverted-primary-color);
-      color: var(--inverted-primary-color-hover)
+      border-bottom: 1px solid var(--primary-color);
+      color: var(--primary-color-hover)
     }
   }
 }

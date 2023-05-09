@@ -1,14 +1,11 @@
 .app.light {
-  --bg-color: #FFFFFF;
-  --inverted-bg-color: #23272f;
+  --bg-color: #ffffff;
+  --inverted-bg-color: #fff9;
 
-  --primary-color: #23272F;
+  --primary-color: #23272f;
   --secondary-color: #000;
-
-  --inverted-primary-color: #f6f7f9;
-  --inverted-secondary-color: #ffffff;
+  --primary-color-border: #0f172a1a;
 
   // Hover text
   --primary-color-hover: #3b3f48;
-  --inverted-primary-color-hover: #d9d9d9;
 }

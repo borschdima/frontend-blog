@@ -27,9 +27,9 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
       onClick={toggleTheme}
     >
       {theme === Theme.DARK ? (
-        <SunSVG className={classes.themeSwitcherIcon} />
+        <SunSVG className={classNames(classes.themeSwitcherIcon, {}, [classes.themeSwitcherIconSun])} />
       ) : (
-        <MoonSVG className={classes.themeSwitcherIcon} />
+        <MoonSVG className={classNames(classes.themeSwitcherIcon, {}, [classes.themeSwitcherIconMoon])} />
       )}
     </Button>
   );

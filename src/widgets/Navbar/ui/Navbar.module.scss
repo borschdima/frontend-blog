@@ -5,6 +5,9 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
+  border-bottom: 1px solid var(--primary-color-border);
+  position: relative;
+  z-index: 1;
 }
 
 .navbarActions {
@@ -18,9 +21,16 @@
   margin-left: auto;
   display: flex;
   align-items: center;
+
+  button:not(:last-child) {
+    margin-right: 12px;
+  }
 }
 
 .navbarLinks {
+  min-width: 124px;
+  text-align: right;
+
   a:first-child {
     margin-right: 16px;
   }

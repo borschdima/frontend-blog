@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
 
@@ -13,11 +15,15 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
-      <div className="page-content">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      {/* Suspense is used for i18next */}
+      <Suspense fallback="">
+        <Navbar />
+
+        <div className="page-content">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 };
