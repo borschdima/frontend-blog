@@ -1,0 +1,11 @@
+.sidebar {
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--inverted-bg-color);
+  position: relative;
+  transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}

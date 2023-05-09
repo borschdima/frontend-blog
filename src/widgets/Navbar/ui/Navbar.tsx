@@ -13,11 +13,15 @@ export const Navbar = (props: NavbarProps) => {
 
   return (
     <div className={classNames(classes.navbar, {}, [className])}>
-      <ThemeSwitcher className="clear" />
+      <div className={classes.navbarActions}>
+        <div className={classes.navbarSwitchers}>
+          <ThemeSwitcher className="clear" />
+        </div>
 
-      <div className={classes.navbarLinks}>
-        <AppLink to="/">Главная</AppLink>
-        <AppLink to="/about">О Сайте</AppLink>
+        <div className={classes.navbarLinks}>
+          <AppLink to="/">Главная</AppLink>
+          <AppLink to="/about">О Сайте</AppLink>
+        </div>
       </div>
     </div>
   );

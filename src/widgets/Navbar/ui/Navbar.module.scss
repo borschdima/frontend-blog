@@ -7,9 +7,20 @@
   padding: 10px 20px;
 }
 
-.navbarLinks {
+.navbarActions {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+}
 
+.navbarSwitchers {
+  margin-right: 24px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbarLinks {
   a:first-child {
     margin-right: 16px;
   }
