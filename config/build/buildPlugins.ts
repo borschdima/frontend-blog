@@ -17,6 +17,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       IS_DEV: isDev,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    ...[isDev && new ReactRefreshWebpackPlugin()].filter(Boolean)
+    ...[isDev && new ReactRefreshWebpackPlugin()].filter(Boolean),
   ];
 }

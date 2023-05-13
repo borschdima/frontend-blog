@@ -58,10 +58,10 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   };
 
   return [
-    fileLoader, 
-    svgLoaders, 
-    babelLoader, 
-    typescriptLoader, 
-    cssLoaders
+    fileLoader,
+    svgLoaders,
+    babelLoader,
+    typescriptLoader,
+    cssLoaders,
   ];
 }
