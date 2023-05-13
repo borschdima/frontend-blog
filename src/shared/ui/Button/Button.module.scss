@@ -1,10 +1,10 @@
 .button {
   cursor: pointer;
-  width: 24px;
   height: 24px;
+  width: 24px;
 
   @media (hover: hover) {
-    &:hover{
+    &:hover {
       transform: scale(1.03);
       transition: all 0.1s linear;
     }
@@ -13,7 +13,7 @@
 
 .clear {
   background: none;
-  padding: 0;
   border: none;
   outline: none;
+  padding: 0;
 }

@@ -1,26 +1,26 @@
 .navbar {
-  width: 100%;
-  height: var(--navbar-height);
-  background: var(--inverted-bg-color);
-  display: flex;
   align-items: center;
-  padding: 10px 20px;
+  background: var(--inverted-bg-color);
   border-bottom: 1px solid var(--primary-color-border);
+  display: flex;
+  height: var(--navbar-height);
+  padding: 10px 20px;
   position: relative;
+  width: 100%;
   z-index: 1;
 }
 
 .navbarActions {
-  margin-left: auto;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-left: auto;
 }
 
 .navbarSwitchers {
-  margin-right: 24px;
-  margin-left: auto;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: 24px;
 
   button:not(:last-child) {
     margin-right: 12px;

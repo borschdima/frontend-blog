@@ -1,9 +1,9 @@
 .appLink {
-  color: var(--primary-color);
-  text-decoration: none;
-  display: inline-block;
   border-bottom: 1px solid transparent;
+  color: var(--primary-color);
+  display: inline-block;
   line-height: 1.2;
+  text-decoration: none;
 }
 
 .primary {
@@ -12,7 +12,7 @@
   @media (hover: hover) {
     &:hover {
       border-bottom: 1px solid var(--primary-color);
-      color: var(--primary-color-hover)
+      color: var(--primary-color-hover);
     }
   }
 }
@@ -23,7 +23,7 @@
   @media (hover: hover) {
     &:hover {
       border-bottom: 1px solid var(--primary-color);
-      color: var(--primary-color-hover)
+      color: var(--primary-color-hover);
     }
   }
 }
