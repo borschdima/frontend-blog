@@ -1,0 +1,12 @@
+.pageError {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}

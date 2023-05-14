@@ -31,6 +31,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-redeclare': 'off',
+    'no-console': 'off',
     '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
     'max-len': [
       'error',

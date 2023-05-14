@@ -17,6 +17,9 @@
 }
 
 .themeSwitcher {
+  height: 24px;
+  width: 24px;
+
   @media (hover: hover) {
     &:hover {
       .themeSwitcherIconSun {
