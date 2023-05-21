@@ -7,6 +7,7 @@ import classes from './Button.module.scss';
 export enum ButtonTheme {
   CLEAR = 'clear',
   DEFAULT = 'default',
+  OUTLINE = 'outline',
 }
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
@@ -15,7 +16,7 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { className, children, theme = ButtonTheme.CLEAR, ...rest } = props;
+  const { className, children, theme = ButtonTheme.DEFAULT, ...rest } = props;
 
   return (
     <button

@@ -1,6 +1,15 @@
 .button {
   cursor: pointer;
+  line-height: 1;
+  outline: none;
   padding: 4px 8px;
+}
+
+.clear {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  padding: 0;
 
   @media (hover: hover) {
     &:hover {
@@ -10,9 +19,9 @@
   }
 }
 
-.clear {
+.outline {
   background: none;
-  border: none;
-  outline: none;
-  padding: 0;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 6px 12px;
 }

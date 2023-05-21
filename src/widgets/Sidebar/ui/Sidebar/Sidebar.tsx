@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button } from 'shared/ui/Button/Button';
 
 import classes from './Sidebar.module.scss';
 
@@ -21,7 +21,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       data-testid="sidebar"
       className={classNames(classes.sidebar, { [classes.collapsed]: collapsed }, [className])}
     >
-      <Button onClick={handleClickToggle} theme={ButtonTheme.DEFAULT} data-testid="sidebar-toggle">
+      <Button onClick={handleClickToggle} data-testid="sidebar-toggle">
         toggle
       </Button>
     </div>

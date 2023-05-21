@@ -6,6 +6,7 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 
 import MoonSVG from 'shared/assets/icons/moon.svg';
 import SunSVG from 'shared/assets/icons/sun.svg';
+
 import { Button, ButtonTheme } from '../Button/Button';
 
 import classes from './ThemeSwitcher.module.scss';
