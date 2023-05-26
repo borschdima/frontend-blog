@@ -8,7 +8,7 @@ import webpack from 'webpack';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({ paths, isDev, analyze }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+  const plugins = [
     new HtmlWebpackPlugin({ template: paths.html }),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
@@ -19,9 +19,10 @@ export function buildPlugins({ paths, isDev, analyze }: BuildOptions): webpack.W
       IS_DEV: isDev,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    ...[
-      isDev && new ReactRefreshWebpackPlugin({ overlay: false }),
-      analyze && new BundleAnalyzerPlugin({ openAnalyzer: false }),
-    ].filter(Boolean),
   ];
+
+  if (isDev) plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
+  if (analyze) plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+
+  return plugins;
 }
