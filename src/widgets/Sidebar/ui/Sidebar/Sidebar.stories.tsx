@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { AppContextDecorator } from 'shared/config/storybook/decorators/AppContextDecorator';
 
 import { Sidebar } from './Sidebar';
 
@@ -18,7 +19,17 @@ export const Light: Story = {
   args: {},
 };
 
+export const LightCollapsed: Story = {
+  args: {},
+  decorators: [AppContextDecorator({ isSidebarCollapsed: true })],
+};
+
 export const Dark: Story = {
   args: {},
   decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const DarkCollapsed: Story = {
+  args: {},
+  decorators: [ThemeDecorator(Theme.DARK), AppContextDecorator({ isSidebarCollapsed: true })],
 };

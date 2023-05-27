@@ -1,5 +1,4 @@
 .appLink {
-  border-bottom: 1px solid transparent;
   color: var(--primary-color);
   display: inline-block;
   line-height: 1.2;
@@ -11,7 +10,6 @@
 
   @media (hover: hover) {
     &:hover {
-      border-bottom: 1px solid var(--primary-color);
       color: var(--primary-color-hover);
     }
   }

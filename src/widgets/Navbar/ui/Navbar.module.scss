@@ -4,10 +4,15 @@
   border-bottom: 1px solid var(--primary-color-border);
   display: flex;
   height: var(--navbar-height);
-  padding: 10px 20px;
+  padding: 10px 24px;
   position: relative;
   width: 100%;
   z-index: 1;
+}
+
+.navbarControls {
+  align-items: center;
+  display: flex;
 }
 
 .navbarActions {
@@ -24,14 +29,5 @@
 
   button:not(:last-child) {
     margin-right: 12px;
-  }
-}
-
-.navbarLinks {
-  min-width: 124px;
-  text-align: right;
-
-  a:first-child {
-    margin-right: 16px;
   }
 }

@@ -1,7 +1,15 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button/Button';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+
+import { useAppContextStore } from 'app/providers/AppContextProvider';
+
+import AboutSvg from 'shared/assets/icons/about.svg';
+import HomeSvg from 'shared/assets/icons/home.svg';
 
 import classes from './Sidebar.module.scss';
 
@@ -10,20 +18,27 @@ interface SidebarProps {
 }
 
 export const Sidebar: FC<SidebarProps> = (props) => {
+  const [collapsed] = useAppContextStore((store) => store.isSidebarCollapsed);
+
   const { className } = props;
 
-  const [collapsed, setCollapsed] = useState(false);
-
-  const handleClickToggle = () => setCollapsed((prev) => !prev);
+  const { t } = useTranslation('components/sidebar');
 
   return (
     <div
       data-testid="sidebar"
       className={classNames(classes.sidebar, { [classes.collapsed]: collapsed }, [className])}
     >
-      <Button onClick={handleClickToggle} data-testid="sidebar-toggle">
-        toggle
-      </Button>
+      <div className={classes.sidebarLinks}>
+        <AppLink to={RoutePath.main} className={classes.sidebarLink}>
+          <HomeSvg />
+          <span>{t('link.main')}</span>
+        </AppLink>
+        <AppLink to={RoutePath.about} className={classes.sidebarLink}>
+          <AboutSvg />
+          <span>{t('link.about')}</span>
+        </AppLink>
+      </div>
     </div>
   );
 };

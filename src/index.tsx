@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import { AppContextProvider } from 'app/providers/AppContextProvider';
 
 import App from './app/App';
 
@@ -12,7 +13,9 @@ render(
   <ErrorBoundary>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <AppContextProvider>
+          <App />
+        </AppContextProvider>
       </ThemeProvider>
     </BrowserRouter>
   </ErrorBoundary>,
