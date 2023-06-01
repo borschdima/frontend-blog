@@ -11,6 +11,7 @@ const meta: Meta<typeof Modal> = {
   args: {
     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda repellendus aliquam ut magni, nulla voluptates eius beatae nostrum in voluptatem atque, adipisci architecto natus quia nemo doloribus neque esse cum eveniet sed ipsam. Expedita fuga alias libero, deserunt quidem soluta odit eveniet, praesentium error voluptatibus recusandae suscipit illo, modi iure corrupti rerum autem debitis nihil similique incidunt sapiente cupiditate. Eum odio delectus libero. Quis, aspernatur suscipit! Quo ab illum officiis excepturi quia aliquid. Minus hic sint quos! Similique debitis voluptas ut ratione magni dolor, dolore odit temporibus excepturi voluptate eum et asperiores sapiente suscipit, minus itaque dignissimos, unde qui.',
     open: true,
+    parentElement: null,
   },
 };
 
