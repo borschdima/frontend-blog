@@ -16,6 +16,7 @@ type Story = StoryObj<typeof BurgerBtn>;
 
 export const Light: Story = {
   args: {},
+  decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
 export const Dark: Story = {

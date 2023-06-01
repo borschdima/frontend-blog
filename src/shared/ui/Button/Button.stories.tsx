@@ -18,6 +18,7 @@ export const Default: Story = {
   args: {
     children: 'Test button',
   },
+  decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
 export const Clear: Story = {
@@ -25,19 +26,45 @@ export const Clear: Story = {
     children: 'Test button',
     theme: ButtonTheme.CLEAR,
   },
+  decorators: [ThemeDecorator(Theme.LIGHT)],
+};
+
+export const ClearDark: Story = {
+  args: {
+    children: 'Test button',
+    theme: ButtonTheme.CLEAR,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const Outline: Story = {
   args: {
-    children: 'Test button',
+    children: 'Outline light',
     theme: ButtonTheme.OUTLINE,
   },
+  decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
 export const OutlineDark: Story = {
   args: {
-    children: 'Test button',
+    children: 'Outline dark',
     theme: ButtonTheme.OUTLINE,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const Link: Story = {
+  args: {
+    children: 'Test button',
+    theme: ButtonTheme.LINK,
+  },
+  decorators: [ThemeDecorator(Theme.LIGHT)],
+};
+
+export const LinkDark: Story = {
+  args: {
+    children: 'Test button',
+    theme: ButtonTheme.LINK,
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };

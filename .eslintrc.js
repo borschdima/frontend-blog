@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 'lates',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', 'jsx', 'tsx'] }],
     'import/no-unresolved': 'off',
@@ -38,6 +38,8 @@ module.exports = {
       'error',
       { code: 120, ignoreTrailingComments: true, ignoreComments: true, ignoreStrings: true },
     ],
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
   },
   globals: {
     IS_DEV: true,

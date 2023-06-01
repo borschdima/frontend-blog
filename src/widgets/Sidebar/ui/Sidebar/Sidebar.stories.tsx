@@ -17,11 +17,12 @@ type Story = StoryObj<typeof Sidebar>;
 
 export const Light: Story = {
   args: {},
+  decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
 export const LightCollapsed: Story = {
   args: {},
-  decorators: [AppContextDecorator({ isSidebarCollapsed: true })],
+  decorators: [AppContextDecorator({ isSidebarCollapsed: true }), ThemeDecorator(Theme.LIGHT)],
 };
 
 export const Dark: Story = {

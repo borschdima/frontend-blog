@@ -10,8 +10,11 @@
   --font-line-l: 32px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
-  /* Sizes */
+  // Sizes
   --navbar-height: 60px;
   --sidebar-width: 260px;
   --sidebar-width-collapsed: 80px;
+
+  // Layers
+  --modal-z-index: 10;
 }

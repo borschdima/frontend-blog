@@ -16,9 +16,10 @@ type Story = StoryObj<typeof MainPage>;
 
 export const Light: Story = {
   args: {},
+  decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
-export const Dart: Story = {
+export const Dark: Story = {
   args: {},
   decorators: [ThemeDecorator(Theme.DARK)],
 };

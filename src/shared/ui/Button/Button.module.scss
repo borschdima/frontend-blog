@@ -25,3 +25,16 @@
   color: var(--primary-color);
   padding: 6px 12px;
 }
+
+.link {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  padding: 0;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-color-hover);
+    }
+  }
+}

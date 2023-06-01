@@ -62,7 +62,7 @@ export default function createFastContext<Store>(initialState: Store) {
     // eslint-disable-next-line arrow-body-style
     useEffect(() => {
       return store.subscribe(() => setState(selector(store.get())));
-    }, []);
+    }, []); // eslint-disable-line
 
     return [state, store.set];
   }

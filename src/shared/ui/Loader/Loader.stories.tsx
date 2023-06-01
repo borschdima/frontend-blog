@@ -16,6 +16,7 @@ type Story = StoryObj<typeof Loader>;
 
 export const Light: Story = {
   args: {},
+  decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 
 export const Dart: Story = {

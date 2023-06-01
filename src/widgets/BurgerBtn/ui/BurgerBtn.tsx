@@ -19,7 +19,7 @@ export const BurgerBtn = (props: BurgerBtnProps) => {
 
   const handleClickToggleSidebar = useCallback(() => {
     setStore({ isSidebarCollapsed: !isSidebarCollapsed });
-  }, [isSidebarCollapsed]);
+  }, [isSidebarCollapsed]); // eslint-disable-line
 
   return (
     <Button

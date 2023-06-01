@@ -12,7 +12,7 @@ const Wrapper = ({ children, value }: WrapperProps) => {
 
   React.useEffect(() => {
     setStore(value);
-  }, []);
+  }, [value]); // eslint-disable-line
 
   return children;
 };
