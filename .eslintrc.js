@@ -6,7 +6,12 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'airbnb', 'eslint:recommended'],
   parser: '@typescript-eslint/parser',
-  overrides: [],
+  overrides: [
+    {
+      files: ['src/**/*Slice.ts'],
+      rules: { 'no-param-reassign': 'off' },
+    },
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
