@@ -1,0 +1,19 @@
+.input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--primary-color-hover);
+  color: var(--primary-color-hover);
+  line-height: 1;
+  outline: none;
+  padding: 4px;
+  width: 100%;
+
+  &:focus {
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+}

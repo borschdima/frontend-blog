@@ -25,9 +25,10 @@
 .content {
   background-color: var(--bg-color);
   border-radius: 8px;
-  max-width: 60%;
+  max-width: 640px;
   padding: 16px;
   position: relative;
+  width: calc(100% - 10px);
   z-index: 2;
 }
 

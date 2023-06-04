@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, FC } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -11,17 +11,23 @@ export enum ButtonTheme {
   LINK = 'link',
 }
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   theme?: ButtonTheme;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { className, children, theme = ButtonTheme.DEFAULT, ...rest } = props;
+  const {
+    className,
+    children,
+    theme = ButtonTheme.DEFAULT,
+    type = 'button',
+    ...rest
+  } = props;
 
   return (
     <button
-      type="button"
+      type={type}
       className={classNames(classes.button, {}, [className, classes[theme]])}
       {...rest}
     >
