@@ -68,3 +68,12 @@ export const LinkDark: Story = {
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const Disabled: Story = {
+  args: {
+    children: 'Test button',
+    theme: ButtonTheme.LINK,
+    disabled: true,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
+import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
 import { LoginForm } from './LoginForm';
@@ -17,10 +18,15 @@ type Story = StoryObj<typeof LoginForm>;
 
 export const Light: Story = {
   args: {},
-  decorators: [ThemeDecorator(Theme.LIGHT)],
+  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({ loginForm: { username: 'admin', password: '123' } })],
 };
 
-export const LoginFormDark: Story = {
+export const Dark: Story = {
   args: {},
-  decorators: [ThemeDecorator(Theme.DARK)],
+  decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({ loginForm: { username: 'admin', password: '123' } })],
+};
+
+export const DarkWithError: Story = {
+  args: {},
+  decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({ loginForm: { username: 'admin', password: '123', error: 'error' } })],
 };

@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -9,7 +10,9 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 import { BurgerBtn } from 'widgets/BurgerBtn';
 
-import { LoginModal } from 'features/AuthByUsername';
+import { LoginModal, getUserAuthData } from 'features/AuthByUsername';
+
+import { userActions } from 'entities/User';
 
 import classes from './Navbar.module.scss';
 
@@ -22,11 +25,16 @@ export const Navbar = (props: NavbarProps) => {
 
   const [isAuthModalOpened, setIsAuthModalOpened] = useState(false);
 
+  const authData = useSelector(getUserAuthData);
+  const dispatch = useDispatch();
+
   const { t } = useTranslation('components/navbar');
 
   const handleCloseAuthModal = useCallback(() => setIsAuthModalOpened(false), []);
 
   const handleShowAuthModal = useCallback(() => setIsAuthModalOpened(true), []);
+
+  const handleLogout = useCallback(() => dispatch(userActions.logout()), [dispatch]);
 
   return (
     <div data-testid="navbar" className={classNames(classes.navbar, {}, [className])}>
@@ -40,7 +48,11 @@ export const Navbar = (props: NavbarProps) => {
           <ThemeSwitcher />
         </div>
 
-        <Button theme={ButtonTheme.LINK} onClick={handleShowAuthModal}>{t('login')}</Button>
+        {
+        authData
+          ? <Button theme={ButtonTheme.LINK} onClick={handleLogout}>{t('logout')}</Button>
+          : <Button theme={ButtonTheme.LINK} onClick={handleShowAuthModal}>{t('login')}</Button>
+        }
 
         <LoginModal isOpen={isAuthModalOpened} onClose={handleCloseAuthModal} />
       </div>

@@ -18,7 +18,8 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: false,
-    debug: IS_DEV,
+    load: 'languageOnly',
+    debug: false,
     interpolation: {
       escapeValue: false,
     },

@@ -1,0 +1,16 @@
+.textTitle {
+  font: var(--font-l);
+  margin-bottom: 10px;
+}
+
+.textParagraph {
+  font: var(--font-m);
+}
+
+.text {
+  color: var(--primary-color);
+
+  &.error {
+    color: var(--text-error-color);
+  }
+}

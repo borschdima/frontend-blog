@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { AppContextProvider } from 'app/providers/AppContextProvider';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
-import i18nForTest from 'shared/config/i18/i18nForTests';
+import i18nForTest from 'shared/config/i18n/i18nForTests';
 
 export interface renderWithWrappersOptions {
   route?: string;
