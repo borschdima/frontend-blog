@@ -1,6 +1,4 @@
-export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData';
-
-export { loginReducer } from './model/slice/loginSlice';
+export { getUserAuthData } from '../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
 
 export { LoginModal } from './ui/LoginModal/LoginModal';
 

@@ -8,7 +8,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   overrides: [
     {
-      files: ['src/**/*Slice.ts'],
+      files: ['src/**/*Slice.ts', 'src/**/reducer*.ts'],
       rules: { 'no-param-reassign': 'off' },
     },
   ],

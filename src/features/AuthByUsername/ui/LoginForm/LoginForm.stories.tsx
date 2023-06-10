@@ -4,7 +4,7 @@ import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorato
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
-import { LoginForm } from './LoginForm';
+import LoginForm from './LoginForm';
 
 const meta: Meta<typeof LoginForm> = {
   title: 'features/LoginForm',
