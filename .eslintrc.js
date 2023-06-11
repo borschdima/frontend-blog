@@ -39,6 +39,7 @@ module.exports = {
     'no-console': 'off',
     'wrap-iife': 'off',
     'react/button-has-type': 'off',
+    'lines-between-class-members': 'off',
     '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
     'max-len': [
       'error',

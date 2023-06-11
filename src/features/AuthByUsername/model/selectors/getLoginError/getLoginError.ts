@@ -1,3 +1,5 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { createSelector } from '@reduxjs/toolkit';
 
-export const getLoginError = (state: StateSchema) => state.loginForm?.error;
+import { getLoginState } from '../getLoginState/getLoginState';
+
+export const getLoginError = createSelector(getLoginState, (loginForm) => loginForm?.error);
