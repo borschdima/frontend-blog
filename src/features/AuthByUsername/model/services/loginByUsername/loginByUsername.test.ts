@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { TestAsyncThunk } from 'shared/lib/tests/testAyncThunk/testAyncThunk';
+import { TestAsyncThunk } from 'shared/lib/tests/testAyncThunk/TestAyncThunk';
 
 import { userActions } from 'entities/User';
 
