@@ -5,7 +5,16 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" },
+  "profile": {
+    "first": "Dima",
+    "lastname": "Borsch",
+    "age": 26,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Krasnodar",
+    "username": "admin",
+    "avatar": "https://it-ros.ru/upload/4070/u407071/0/5/algoritmy-i-teorija-vychislenii-photo-normal.jpg"
+  },
   "users": [
     {
       "id": 1,

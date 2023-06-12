@@ -1,0 +1,43 @@
+.sidebarLink {
+  align-items: center;
+  border-bottom: none;
+  display: flex;
+  flex-shrink: 0;
+  line-height: 1;
+
+  svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+    height: 22px;
+    margin-right: 16px;
+    width: 22px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        color: var(--primary-color-hover);
+      }
+    }
+  }
+
+  &.collapsed {
+    flex-direction: column;
+    font: var(--font-sm);
+
+    svg {
+      margin-bottom: 12px;
+      margin-right: 0;
+    }
+
+    span {
+      display: inline-block;
+      transform: translateX(0);
+      white-space: nowrap;
+    }
+  }
+}

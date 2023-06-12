@@ -1,15 +1,12 @@
-import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
-
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import { useAppContextStore } from 'app/providers/AppContextProvider';
 
-import AboutSvg from 'shared/assets/icons/about.svg';
-import HomeSvg from 'shared/assets/icons/home.svg';
+import { sidebarItemsList } from '../../model/items';
+
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 import classes from './Sidebar.module.scss';
 
@@ -17,12 +14,10 @@ interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = (props) => {
+export const Sidebar = memo((props: SidebarProps) => {
   const [collapsed] = useAppContextStore((store) => store.isSidebarCollapsed);
 
   const { className } = props;
-
-  const { t } = useTranslation('components/sidebar');
 
   return (
     <div
@@ -30,15 +25,10 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       className={classNames(classes.sidebar, { [classes.collapsed]: collapsed }, [className])}
     >
       <div className={classes.sidebarLinks}>
-        <AppLink to={RoutePath.main} className={classes.sidebarLink}>
-          <HomeSvg />
-          <span>{t('link.main')}</span>
-        </AppLink>
-        <AppLink to={RoutePath.about} className={classes.sidebarLink}>
-          <AboutSvg />
-          <span>{t('link.about')}</span>
-        </AppLink>
+        {sidebarItemsList.map((item) => (
+          <SidebarItem item={item} key={item.path} collapsed={collapsed} />
+        ))}
       </div>
     </div>
   );
-};
+});

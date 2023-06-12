@@ -1,6 +1,6 @@
 import { FormEvent, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -9,6 +9,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import { ReducersList, useDynamicModuleLoader } from 'shared/lib/hooks/useDynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
@@ -39,7 +40,7 @@ const LoginForm = memo((props: LoginFormProps) => {
   const error = useSelector(getLoginError);
   const isLoading = useSelector(getLoginIsLoading);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleChangeUsername = useCallback((value) => {
     dispatch(loginActions.setUsername(value));
@@ -54,9 +55,10 @@ const LoginForm = memo((props: LoginFormProps) => {
   const handleSubmitForm = (e: FormEvent) => {
     e.preventDefault();
 
-    (dispatch(loginByUsername({ username, password })) as any)
+    dispatch(loginByUsername({ username, password }))
       .unwrap()
-      .then(onClose);
+      .then(onClose)
+      .catch(() => {});
   };
 
   return (

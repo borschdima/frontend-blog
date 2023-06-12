@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -12,7 +12,7 @@ interface BurgerBtnProps {
   className?: string;
 }
 
-export const BurgerBtn = (props: BurgerBtnProps) => {
+export const BurgerBtn = memo((props: BurgerBtnProps) => {
   const { className } = props;
 
   const [isSidebarCollapsed, setStore] = useAppContextStore((store) => store.isSidebarCollapsed);
@@ -33,4 +33,4 @@ export const BurgerBtn = (props: BurgerBtnProps) => {
       <span />
     </Button>
   );
-};
+});
