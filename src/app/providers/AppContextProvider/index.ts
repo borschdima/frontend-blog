@@ -1,1 +1,3 @@
-export { AppContextProvider, useAppContextStore } from './lib/AppContext';
+import { AppContextProvider, useAppContextStore } from './lib/AppContext';
+
+export { AppContextProvider, useAppContextStore };

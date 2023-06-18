@@ -15,8 +15,8 @@ export function useTheme(): UseThemeResult {
 
     localStorage.setItem(LOCALE_STORATE_THEME_KEY, newTheme);
 
-    setTheme(newTheme);
+    setTheme?.(newTheme);
   }, [theme, setTheme]);
 
-  return { theme, toggleTheme, setTheme };
+  return { theme: theme || Theme.LIGHT, toggleTheme, setTheme: setTheme! };
 }

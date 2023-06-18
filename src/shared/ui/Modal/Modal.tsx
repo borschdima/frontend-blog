@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 
 import { Portal } from 'shared/ui/Portal/Portal';
 
@@ -10,7 +10,7 @@ interface ModalProps {
   className?: string;
   children: ReactNode;
   open?: boolean;
-  parentElement?: HTMLElement;
+  parentElement?: HTMLElement | null;
   onClose?: () => void;
 }
 
@@ -25,7 +25,7 @@ export const Modal = (props: ModalProps) => {
 
   const [isClosing, setIsClosing] = useState(false);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [classes.opened]: open,
     [classes.closing]: isClosing,
   };

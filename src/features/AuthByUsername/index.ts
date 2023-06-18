@@ -1,5 +1,7 @@
-export { getUserAuthData } from '../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
+import { getUserAuthData } from '../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
 
-export { LoginModal } from './ui/LoginModal/LoginModal';
+import { LoginModal } from './ui/LoginModal/LoginModal';
 
-export type { LoginSchema } from './model/types/loginSchema';
+import type { LoginSchema } from './model/types/loginSchema';
+
+export { getUserAuthData, LoginModal, LoginSchema };

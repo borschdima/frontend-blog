@@ -1,0 +1,22 @@
+.profileCard {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data {
+  margin-top: 30px;
+}
+
+.input {
+  max-width: 400px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

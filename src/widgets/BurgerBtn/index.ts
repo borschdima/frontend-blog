@@ -1,1 +1,3 @@
-export { BurgerBtn } from './ui/BurgerBtn';
+import { BurgerBtn } from './ui/BurgerBtn';
+
+export { BurgerBtn };

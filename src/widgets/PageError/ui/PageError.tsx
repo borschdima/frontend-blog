@@ -7,7 +7,7 @@ import { Button } from 'shared/ui/Button/Button';
 import classes from './PageError.module.scss';
 
 export const PageError = ({ resetErrorBoundary }: FallbackProps) => {
-  const { t } = useTranslation('components/page-error');
+  const { t } = useTranslation('components/page_error');
 
   return (
     <div className={classNames(classes.pageError)}>

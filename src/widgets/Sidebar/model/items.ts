@@ -14,17 +14,17 @@ export interface SidebarItemType {
 
 export const sidebarItemsList: SidebarItemType[] = [
   {
-    path: RouteConfig.main.path,
+    path: RouteConfig.main.path || '/',
     Icon: HomeSvg,
     text: 'main',
   },
   {
-    path: RouteConfig.about.path,
+    path: RouteConfig.about.path || '/',
     Icon: AboutSvg,
     text: 'about',
   },
   {
-    path: RouteConfig.profile.path,
+    path: RouteConfig.profile.path || '/',
     Icon: ProfileSvg,
     text: 'profile',
   },

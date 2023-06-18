@@ -1,0 +1,6 @@
+title: "Authorization"
+error: "Incorrect username or password"
+login: "Login"
+placeholder:
+  username: "Enter your username..."
+  password: "Enter your password..."

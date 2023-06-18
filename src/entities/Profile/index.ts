@@ -1,3 +1,9 @@
-export { profileActions, profileReducer } from './model/slice/profileSlice';
+import { ProfileCard } from './ui/ProfileCard/ProfileCard';
 
-export type { ProfileScheme, Profile } from './model/types/profile';
+import { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
+
+import { profileActions, profileReducer } from './model/slice/profileSlice';
+
+import type { ProfileScheme, Profile } from './model/types/profile';
+
+export { ProfileScheme, Profile, profileActions, profileReducer, fetchProfileData, ProfileCard };

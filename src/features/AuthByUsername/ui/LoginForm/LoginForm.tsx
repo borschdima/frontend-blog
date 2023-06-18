@@ -50,7 +50,7 @@ const LoginForm = memo((props: LoginFormProps) => {
     dispatch(loginActions.setPassword(value));
   }, [dispatch]);
 
-  const { t } = useTranslation('components/login-form');
+  const { t } = useTranslation('components/login_form');
 
   const handleSubmitForm = (e: FormEvent) => {
     e.preventDefault();

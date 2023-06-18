@@ -8,5 +8,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     port,
     open: true,
     historyApiFallback: true,
+    devMiddleware: { writeToDisk: true }, // let copy-webpack-plugin rewrite locales in public folder
   };
 }

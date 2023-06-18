@@ -40,6 +40,7 @@ module.exports = {
     'wrap-iife': 'off',
     'react/button-has-type': 'off',
     'lines-between-class-members': 'off',
+    'no-undef': 'off',
     '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
     'max-len': [
       'error',
@@ -50,5 +51,6 @@ module.exports = {
   },
   globals: {
     IS_DEV: true,
+    API_URL: true,
   },
 };
