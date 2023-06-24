@@ -1,19 +1,27 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
   "profile": {
-    "first": "Dima",
+    "first": "Tester",
     "lastname": "Borsch",
-    "age": 26,
+    "age": 23,
     "currency": "RUB",
     "country": "Russia",
     "city": "Krasnodar",
     "username": "admin",
-    "avatar": "https://it-ros.ru/upload/4070/u407071/0/5/algoritmy-i-teorija-vychislenii-photo-normal.jpg"
+    "avatar": "https://gorodprizrak.com/wp-content/uploads/2023/03/13b5a372655fc489f4a29217d43c235d.jpg"
   },
   "users": [
     {

@@ -1,0 +1,24 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.label {
+  color: var(--primary-color);
+  margin-right: 16px;
+}
+
+.select {
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  min-width: 100px;
+  outline: none;
+  padding: 4px 8px;
+
+  option {
+    background: none;
+    color: var(--primary-color);
+    padding: 4px 8px;
+  }
+}

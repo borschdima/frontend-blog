@@ -38,6 +38,20 @@
   }
 }
 
+.outline_success {
+  background: none;
+  border: 1px solid var(--success-color);
+  color: var(--success-color);
+  padding: 6px 12px;
+
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid var(--success-color-hover);
+      color: var(--success-color-hover);
+    }
+  }
+}
+
 .link {
   background: none;
   border: none;

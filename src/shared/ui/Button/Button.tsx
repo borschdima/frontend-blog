@@ -8,6 +8,7 @@ export enum ButtonTheme {
   CLEAR = 'clear',
   DEFAULT = 'default',
   OUTLINE = 'outline',
+  OUTLINE_SUCCESS = 'outline_success',
   LINK = 'link',
 }
 
