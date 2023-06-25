@@ -9,7 +9,7 @@ import webpack from 'webpack';
 
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev, analyze }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, analyze, project }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
     new HtmlWebpackPlugin({ template: paths.html }),
     new webpack.ProgressPlugin(),
@@ -40,6 +40,7 @@ export function buildPlugins({ paths, isDev, analyze }: BuildOptions): webpack.W
     new webpack.DefinePlugin({
       IS_DEV: isDev,
       API_URL: JSON.stringify(process.env.API_URL),
+      PROJECT: JSON.stringify(project),
     }),
     new webpack.HotModuleReplacementPlugin(),
   ];

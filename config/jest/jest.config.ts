@@ -40,6 +40,7 @@ export default {
   globals: {
     IS_DEV: true,
     API_URL: '',
+    PROJECT: 'jest',
   },
 
   // Indicates whether the coverage information should be collected while executing the test

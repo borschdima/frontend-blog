@@ -1,1 +1,7 @@
 title: "Profile"
+error:
+  no_data: "You have to provide information"
+  incorrect_user_data: "Your name and username have to be correct and provided"
+  incorrect_age: "Age is incorrect"
+  incorrect_country: "Country is incorrect"
+  server_error: "An error has occured"

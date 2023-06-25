@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   ProfileCard,
   fetchProfileData,
@@ -5,6 +6,7 @@ import {
   getProfileForm,
   getProfileIsLoading,
   getProfileReadonly,
+  getProfileValidateErrors,
   profileActions,
   profileReducer,
 } from 'entities/Profile';
@@ -13,11 +15,14 @@ import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { ReducersList, useDynamicModuleLoader } from 'shared/lib/hooks/useDynamicModuleLoader';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
+
+import classes from './ProfilePage.module.scss';
 
 const reducers: ReducersList = {
   profile: profileReducer,
@@ -26,10 +31,13 @@ const reducers: ReducersList = {
 const ProfilePage = () => {
   useDynamicModuleLoader(reducers);
 
+  const { t } = useTranslation('pages/profile');
+
   const formData = useSelector(getProfileForm);
   const error = useSelector(getProfileError);
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
 
   const dispatch = useAppDispatch();
 
@@ -66,12 +74,21 @@ const ProfilePage = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(fetchProfileData());
+    if (PROJECT !== 'storybook') dispatch(fetchProfileData());
   }, [dispatch]);
 
   return (
     <div>
       <ProfilePageHeader />
+
+      {validateErrors.length > 0 && (
+        <div className={classes.profileErrors}>
+          {validateErrors.map((err) => (
+            <Text key={err} text={t(`error.${err}`)} theme={TextTheme.ERROR} />
+          ))}
+        </div>
+      )}
+
       <ProfileCard
         data={formData}
         error={error}

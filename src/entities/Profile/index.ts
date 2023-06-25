@@ -12,6 +12,7 @@ import { getProfileError } from './model/selectors/getProfileError/getProfileErr
 import { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileReadonly } from './model/selectors/getProfileReadOnly/getProfileReadOnly';
 import { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
+import { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 
 export {
   ProfileScheme,
@@ -25,5 +26,6 @@ export {
   getProfileIsLoading,
   getProfileReadonly,
   getProfileForm,
+  getProfileValidateErrors,
   updateProfileData,
 };
