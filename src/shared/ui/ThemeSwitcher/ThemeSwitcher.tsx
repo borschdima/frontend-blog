@@ -26,11 +26,21 @@ export const ThemeSwitcher = memo((props: ThemeSwitcherProps) => {
       className={classNames(classes.themeSwitcher, {}, [className])}
       onClick={toggleTheme}
     >
-      {theme === Theme.DARK ? (
+      {theme === Theme.DARK && (
         <SunSVG
           className={classNames(classes.themeSwitcherIcon, {}, [classes.themeSwitcherIconSun])}
         />
-      ) : (
+      )}
+
+      {theme === Theme.LIGHT && (
+        <div className={classNames(classes.themeSwitcherSphere, {}, [classes.themeSwitcherSphereDarkBlue])} />
+      )}
+
+      {theme === Theme.DARK_BLUE && (
+        <div className={classNames(classes.themeSwitcherSphere, {}, [classes.themeSwitcherSphereLightOpal])} />
+      )}
+
+      {theme === Theme.LIGHT_OPAL && (
         <MoonSVG
           className={classNames(classes.themeSwitcherIcon, {}, [classes.themeSwitcherIconMoon])}
         />
