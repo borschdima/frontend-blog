@@ -14,20 +14,20 @@ export function useTheme(): UseThemeResult {
     let newTheme: Theme;
 
     switch (theme) {
-      case Theme.DARK:
-        newTheme = Theme.LIGHT;
-
-        break;
       case Theme.LIGHT:
-        newTheme = Theme.DARK_BLUE;
+        newTheme = Theme.DARK;
 
         break;
-      case Theme.DARK_BLUE:
+      case Theme.DARK:
         newTheme = Theme.LIGHT_OPAL;
 
         break;
       case Theme.LIGHT_OPAL:
-        newTheme = Theme.DARK;
+        newTheme = Theme.DARK_BLUE;
+
+        break;
+      case Theme.DARK_BLUE:
+        newTheme = Theme.LIGHT;
 
         break;
       default:
