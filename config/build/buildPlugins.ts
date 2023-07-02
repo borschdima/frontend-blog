@@ -24,15 +24,18 @@ export function buildPlugins({ paths, isDev, analyze, project }: BuildOptions): 
           to: `${paths.public}/[path][name].json`,
           force: true,
           context: './src/',
-          transform(content) {
-            return Buffer.from(
-              JSON.stringify(
-                yaml.load(content.toString('utf8'), {
-                  schema: yaml.JSON_SCHEMA,
-                }),
-              ),
-              'utf8',
-            );
+          transform: {
+            transformer: (content) => (
+              Buffer.from(
+                JSON.stringify(
+                  yaml.load(content.toString('utf8'), {
+                    schema: yaml.JSON_SCHEMA,
+                  }),
+                ),
+                'utf8',
+              )
+            ),
+            cache: true,
           },
         },
       ],

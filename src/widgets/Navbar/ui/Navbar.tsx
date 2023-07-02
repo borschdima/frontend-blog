@@ -10,9 +10,9 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 import { BurgerBtn } from 'widgets/BurgerBtn';
 
-import { LoginModal, getUserAuthData } from 'features/AuthByUsername';
+import { LoginModal } from 'features/AuthByUsername';
 
-import { userActions } from 'entities/User';
+import { getUserAuthData, userActions } from 'entities/User';
 
 import classes from './Navbar.module.scss';
 
